@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CPmunnity | Competitive Programming & Socratic AI IDE</title>
+  <meta name="description" content="Gamified Competitive Programming platform featuring live Codeforces problems, integrated Monaco IDE, Socratic Gemini AI assistant, placement test rating calibration, real-time leaderboard, and community chatwall." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            arena: {
+              50: '#f0f4ff',
+              100: '#e0e9fe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#0f172a',
+              950: '#0b0f19',
+            },
+            tier: {
+              newbie: '#cccccc',
+              pupil: '#77ff77',
+              specialist: '#03a89e',
+              expert: '#0000ff',
+              candidate: '#aa00aa',
+              master: '#ff8c00',
+              grandmaster: '#ff0000'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"></script>
+
+  <!-- Monaco Editor loader stylesheet -->
+  <style>
+    /* Custom scrollbar & CSS variables */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0f19;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+<body class="bg-[#0b0f19] text-slate-100 font-sans antialiased min-h-screen selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+  <div id="root"></div>
+  <script type="module" src="/main.jsx"></script>
+</body>
+</html>
